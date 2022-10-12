@@ -67,3 +67,30 @@ return $tweet;
 
 renderTweets(data);
 
+// grab the form
+  const $form = $('.form-inline');
+
+  // listen for the form to submit
+  $form.on('submit', (event) => {
+    event.preventDefault(); // hey browser, we've got this! don't do what you would normally do
+  // get the data from the form
+  const dataToSendToServer = $form.serialize();
+  console.log(dataToSendToServer);
+
+  // send the information to the server via a POST request
+  $.ajax({
+    url: '/tweets',
+    method: 'POST',
+    data: dataToSendToServer
+  })
+  .then((tweetdata) => {
+    console.log("tweetdata",tweetdata);
+  })
+  .catch((err) => {
+    console.log("err",err);
+  });
+
+
+
+
+});
