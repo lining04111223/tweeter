@@ -43,14 +43,31 @@ let $tweet = `
 return $tweet;
 }
 
-
-
 // grab the form
   const $form = $('.form-inline');
 
   // listen for the form to submit
-  $form.on('submit', (event) => {
+  $form.on('submit', function(event){
     event.preventDefault(); // hey browser, we've got this! don't do what you would normally do
+  const text = $(this).find("textarea").val();
+
+  if (text.length === 0){
+    $(".texterr").slideUp(1000);
+    return $('.emptytexterr').slideDown(1000)
+  };
+
+  if (text.length > 0 ){
+    $('.emptytexterr').slideUp(1000)
+  };
+
+  if(text.length>140){
+    return $(".texterr").slideDown(1000);
+      }
+      
+  if(text.length<=140){
+    $(".texterr").slideUp(1000);
+     } 
+
   // get the data from the form
   const dataToSendToServer = $form.serialize();
   console.log("datasend",dataToSendToServer);
@@ -87,26 +104,5 @@ return $tweet;
   });
   }
   loadtweets();
-
-//send err
-  $(".form-inline").submit(function(e) {
-  e.preventDefault();
-  if ($(this).find("textarea").val()=== ""){
-    $(".texterr").slideUp(1000);
-    return $('.emptytexterr').slideDown(1000)
-  };
-  if ($(this).find("textarea").val().length > 0 ){
-    $('.emptytexterr').slideUp(1000)
-  };
-  if($(this).find("textarea").val().length>140){
-    return $(".texterr").slideDown(1000);
-      }
-  if($(this).find("textarea").val().length<=140){
-    $(".texterr").slideUp(1000);
-     }   
-  })
-
-
-
 
 });
