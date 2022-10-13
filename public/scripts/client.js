@@ -32,7 +32,7 @@ let $tweet = `
 <div class="tweet-text">${dataid.content.text}</div> 
 <div class="border"></div> 
 
-<footer class="tweet-footer">${dataid.created_at}
+<footer class="tweet-footer">${timeago.format(dataid.created_at)}
  <div class="icon-group">        
    <i class="fas fa-flag"></i>         
    <i class="fas fa-retweet"></i>      
