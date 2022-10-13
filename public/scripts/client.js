@@ -88,4 +88,25 @@ return $tweet;
   }
   loadtweets();
 
+//send err
+  $(".form-inline").submit(function(e) {
+  e.preventDefault();
+  if ($(this).find("textarea").val()=== ""){
+    $(".texterr").slideUp(1000);
+    return $('.emptytexterr').slideDown(1000)
+  };
+  if ($(this).find("textarea").val().length > 0 ){
+    $('.emptytexterr').slideUp(1000)
+  };
+  if($(this).find("textarea").val().length>140){
+    return $(".texterr").slideDown(1000);
+      }
+  if($(this).find("textarea").val().length<=140){
+    $(".texterr").slideUp(1000);
+     }   
+  })
+
+
+
+
 });
