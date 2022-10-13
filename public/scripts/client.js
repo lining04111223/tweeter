@@ -1,22 +1,16 @@
-/*
- * Client-side JS logic goes here
- * jQuery is already loaded
- * Reminder: Use (and do all your DOM work in) jQuery's document ready function
- */
-// Test / driver code (temporary). Eventually will get this from the server.
-// Fake data taken from initial-tweets.json
 
 $(document).ready(() => {
-
+//The function render the data to the page
 const renderTweets = function(data) {
   for (const dataid of data) {
   const $tweet = createTweetElement(dataid);
 
 // Test / driver code (temporary)
-  $('.articles-container').append($tweet); // to add it to the page so we can make sure it's got all the right elements, classes, etc.
+  $('.articles-container').prepend($tweet); // to add it to the page so we can make sure it's got all the right elements, classes, etc.
   }
 }
 
+//The function create new tweet
 const createTweetElement = function(dataid) {
 let $tweet = `
 <article class="tweets-container"> 
@@ -53,7 +47,7 @@ return $tweet;
     event.preventDefault(); // hey browser, we've got this! don't do what you would normally do
   // get the data from the form
   const dataToSendToServer = $form.serialize();
-  console.log(dataToSendToServer);
+  console.log("datasend",dataToSendToServer);
 
   // send the information to the server via a POST request
    $.ajax({
@@ -61,8 +55,9 @@ return $tweet;
     method: 'POST',
     data: dataToSendToServer
    })
-   .then((tweetdata) => {
-    console.log("tweetdata",tweetdata);
+   .then((data) => {
+    loadtweets();  
+    console.log("tweetdata",data);
    })
    .catch((err) => {
     console.log("err",err);
@@ -71,6 +66,7 @@ return $tweet;
   
 
   // make an AJAX request for all the tweets
+  const loadtweets = function(){
   $.ajax({
     url: '/tweets',
     method: 'GET'
@@ -78,12 +74,12 @@ return $tweet;
   .then((data) => {
 
     renderTweets(data);    
-    console.log(data);
+    console.log("get",data);
   })
   .catch((err) => {
     console.log(err);
   });
-
-
+  }
+  loadtweets();
 
 });
