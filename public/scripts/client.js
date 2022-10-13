@@ -1,5 +1,11 @@
 
 $(document).ready(() => {
+//Preventing XSS with Escaping
+  const escape = function (str) {
+    let div = document.createElement("div");
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
+  };
 //The function render the data to the page
 const renderTweets = function(data) {
   for (const dataid of data) {
@@ -23,7 +29,7 @@ let $tweet = `
  <div class="tweeter-name">${dataid.user.handle}</div>     
  </header>  
 
-<div class="tweet-text">${dataid.content.text}</div> 
+<div class="tweet-text">${escape(dataid.content.text)}</div> 
 <div class="border"></div> 
 
 <footer class="tweet-footer">${timeago.format(dataid.created_at)}
