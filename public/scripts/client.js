@@ -79,12 +79,17 @@ return $tweet;
     data: dataToSendToServer
    })
    .then((data) => {
+    $("#tweet-text").val("");
+    $("#counter")[0].value = 140;
+    console.log($("#counter")[0])
     loadtweets();  
     console.log("tweetdata",data);
    })
    .catch((err) => {
     console.log("err",err);
    });
+
+
   });
   
 

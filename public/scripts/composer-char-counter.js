@@ -7,6 +7,9 @@ $(document).ready(function() {
   counter.innerText = remainNum.toString();
   if (remainNum < 0) {
     $(counter).addClass("changeToRed");
+
+  }else {
+    $(counter).removeClass("changeToRed");
   }
   })
 });
