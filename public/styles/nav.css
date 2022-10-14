@@ -30,3 +30,11 @@ i.fa-solid.fa-angles-down{
   justify-content: center;
   color: red;
 }
+
+/*Mobile*/
+@media only screen and (max-width: 767px) {
+  nav {
+    background-color: #e6ad00;
+    background-image: url("https://www.transparenttextures.com/patterns/basketball.png");
+  }
+}

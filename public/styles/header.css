@@ -1,7 +1,6 @@
 .header {
   margin-top: 120px;
   height: 400px;
-  width: 100%;
   color: #FFFFFF;
   font-size: xx-large;
 
@@ -10,6 +9,5 @@
   justify-content: center;
   flex-direction: column;
   background-color: #e6ad00;
-  background-image: url("https://www.transparenttextures.com/patterns/argyle.png");
-
+  background-image: url("https://www.transparenttextures.com/patterns/basketball.png");
 }
