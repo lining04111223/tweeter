@@ -20,14 +20,14 @@ This repository is the starter code for the project: Students will fork and clon
 - chance
 
 ## App screenshots
-screenshot of desktop Tweeter
+Screenshot of desktop Tweeter
 !["screenshot of desktop Tweeter"](https://github.com/lining04111223/tweeter/blob/master/docs/Screenshot%20of%20desktop%20Tweeter.png?raw=true)
 
-screenshot of empty error in desktop Tweeter
+Screenshot of empty error in desktop Tweeter
 !["screenshot of text error in desktop Tweeter"](https://github.com/lining04111223/tweeter/blob/master/docs/Screenshot%20of%20empty%20error%20in%20desktop%20Tweeter.png?raw=true)
 
-screenshot of mobile Tweeter
+Screenshot of mobile Tweeter
 !["screenshot of mobile Tweeter"](https://github.com/lining04111223/tweeter/blob/master/docs/Screenshot%20of%20mobile%20Tweeter.png?raw=true)
 
-screenshot of empty error in mobile Tweeter
+Screenshot of empty error in mobile Tweeter
 !["screenshot of text error in mobile Tweeter"](https://github.com/lining04111223/tweeter/blob/master/docs/screenshot%20of%20text%20error%20in%20mobil%20Tweeter.png?raw=true)
