@@ -16,3 +16,18 @@ This repository is the starter code for the project: Students will fork and clon
 
 - Express
 - Node 5.10.x or above
+- body-parser
+- chance
+
+## App screenshots
+screenshot of desktop Tweeter
+!["screenshot of desktop Tweeter"](https://github.com/lining04111223/tweeter/blob/master/docs/Tweeter-Desktop.png)
+
+screenshot of text error in desktop Tweeter
+!["screenshot of text error in desktop Tweeter"](https://github.com/lining04111223/tweeter/blob/master/docs/Tweeter-Desktop-Texterr.png)
+
+screenshot of mobile Tweeter
+!["screenshot of mobile Tweeter"](https://github.com/lining04111223/tweeter/blob/master/docs/Tweeter-Mobile.png)
+
+screenshot of empty error in mobile Tweeter
+!["screenshot of empty error in mobile Tweeter"](https://github.com/lining04111223/tweeter/blob/master/docs/Tweeter-Mobile-Emptyterr.png)

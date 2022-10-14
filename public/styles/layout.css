@@ -1,18 +1,9 @@
-/*
- * http://www.paulirish.com/2012/box-sizing-border-box-ftw/
- * https://css-tricks.com/international-box-sizing-awareness-day/
- * Do not modify these two selectors, please
- */
 html {
   box-sizing: border-box;
 }
 *, *:before, *:after {
   box-sizing: inherit;
 }
-
-/*
- * Global layout stuff
- */
 
 body {
   color: #545149;
@@ -22,7 +13,6 @@ body {
   display: flex; 
   /*flex-direction: column;*/
   justify-content: center;
-
 }
 
 .container {
@@ -32,7 +22,6 @@ body {
 
 /*Desktop*/
 @media only screen and (min-width: 768px) {
-  
   body {
     display: flex;
     justify-content: space-between;  
@@ -50,7 +39,6 @@ body {
   main {
     margin: 1vw;
   }
-
 }
 
 /*Mobile*/
@@ -62,13 +50,13 @@ body {
   body{
    display: flex;
    flex-direction: column;
-}
- nav {
+  }
+  nav {
   background-color: #e6ad00;
   background-image: url("https://www.transparenttextures.com/patterns/basketball.png");
  }
 
- main {
+  main {
    width: 90%;
    margin-top:0;
  }
